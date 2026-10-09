@@ -1,8 +1,10 @@
-const brand=document.querySelector('.brand');
+const brand = document.querySelector('.brand');
 
-brand.addEventListener('click',e=>{
-    window.location.href='index.html'
-})
+if (brand) {
+    brand.addEventListener('click', () => {
+        window.location.href = 'index.html';
+    });
+}
 
 
 // ---------- Catalogue (affichage uniquement : les prix réels sont revérifiés côté serveur) ----------
@@ -16,10 +18,11 @@ const PRODUCTS = {
 const IMAGE = 'chaussure1-bg.png';
 const STORAGE_KEY = 'cart';
 const MAX_QTY = 10;
+
+// URL de l'API : utilise ton Worker Cloudflare en production, et le serveur local en dev
 const checkoutEndpoint = ['localhost', '127.0.0.1'].includes(window.location.hostname)
-    && window.location.port !== '3000'
     ? 'http://127.0.0.1:3000/create-checkout-session'
-    : '/create-checkout-session';
+    : 'https://boutique-en-ligne-demo-nrc.marechalucas2612.workers.dev/create-checkout-session';
 
 
 function loadCart() {
