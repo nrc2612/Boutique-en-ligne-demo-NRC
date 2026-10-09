@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Unbounded:wght@500;700;800;900&display=swap" rel="stylesheet">
+    <title>Panier</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="panier.css">
+</head>
+<body>
+    <nav class="navbar">
+        <p class="brand">Brand</p>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="#">Nouvelle collection</a></li>
+            <li><a href="#">Homme</a></li>
+            <li><a href="#">Femme</a></li>
+        </ul>
+        <a href="cart.html" class="cart"><i class="fa-solid fa-cart-shopping"></i><span class="cart-count">Panier</span></a>
+    </nav>
+
+    <main class="cart-page">
+        <a href="index.html" class="mobile-back eyebrow">&#8592 Accueil</a>
+        <p class="eyebrow mobile-display">&gt; Brand &lt;</p>
+        <h1 class="title">Votre <span>Panier</span></h1>
+
+        <div class="cart-layout hidden" id="cart-layout">
+            <ul class="cart-items" id="cart-items"></ul>
+
+            <aside class="cart-summary">
+                <h2>Récapitulatif</h2>
+                <dl>
+                    <div><dt>Sous-total</dt><dd id="cart-subtotal"></dd></div>
+                    <div><dt>Livraison</dt><dd>Offerte</dd></div>
+                    <div class="cart-total-row"><dt>Total</dt><dd id="cart-total"></dd></div>
+                </dl>
+                <button type="button" class="cta2" id="checkout-btn"><i class="fa-solid fa-lock"></i> Payer maintenant</button>
+                <p class="cart-error" id="checkout-error" role="alert"></p>
+                <a href="index.html" class="cart-continue">Continuer mes achats</a>
+            </aside>
+        </div>
+
+        <div class="cart-empty hidden" id="cart-empty">
+            <p class="description"><span>Votre panier est vide.</span></p>
+            <a href="index.html#products-section" class="cta">Voir la collection <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>

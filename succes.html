@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Unbounded:wght@500;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <title>Commande confirmée</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-products.css">
+</head>
+
+<body autocomplete="off">
+    <nav class="navbar">
+        <p class="brand">Brand</p>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+        </ul>
+        <a href="index.html" class="cart"><i class="fa-solid fa-house"></i> Accueil</a>
+    </nav>
+    <div class="hero">
+        <div class="hero-content success-content">
+            <div class="success-icon"><i class="fa-solid fa-check"></i></div>
+            <h1 class="title">Commande<br>
+                <span class="word">
+                    <span class="sr-only">Acceptée</span>
+                    <span aria-hidden="true"><span class="ch">A</span><span class="ch">c</span><span class="ch">c</span><span class="ch">e</span><span class="ch">p</span><span class="ch">t</span><span class="ch">é</span><span class="ch">e</span></span>
+                </span>
+            </h1>
+            <p class="description">
+                <span>Votre achat compte beaucoup pour nous. Au moindre problème, contactez le service client.</span>
+            </p>
+            <a href="index.html" class="cta">Retour à l'accueil <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </div>
+    <script>localStorage.removeItem('cart');</script>
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Unbounded:wght@500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <title>e-commerce exemple</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="style-products.css">
+</head>
+
+<body autocomplete="off">
+    <nav class="navbar">
+        <p class="brand">Brand</p>
+        <ul>
+            <li><a href="#products-section">Nouvelle collection</a></li>
+            <li><a href="#products-section">Homme</a></li>
+            <li><a href="#products-section">Femme</a></li>
+            <li><a href="cart.html">Panier</a></li>
+        </ul>
+        <a href="cart.html" class="cart"><i class="fa-solid fa-cart-shopping"></i><span class="cart-count"> Panier</span></a>
+    </nav>
+    <div class="hero">
+        <div class="hero-content">
+            <p class="eyebrow">&gt; Nouvelle collection &lt;</p>
+            <h1 class="title">Bougez<br>
+                <span class="word">
+                    <span class="sr-only">Différemment</span>
+                    <span aria-hidden="true"><span class="ch">D</span><span class="ch">i</span><span
+                            class="ch">f</span><span class="ch">f</span><span class="ch">é</span><span
+                            class="ch">r</span><span class="ch">e</span><span class="ch">m</span><span
+                            class="ch">m</span><span class="ch">e</span><span class="ch">n</span><span
+                            class="ch">t</span></span>
+                </span>
+            </h1>
+            <p class="description">
+                <span>Si discrète qu'on l'oublie. <br> <span class="selection-diff">Jusqu'au jour où on vous demande d'où elle sort.</span></span>
+            </p>
+            <a class="cta" href="#products-section" style="text-decoration: none;">Explorer la collection <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="container">
+            <div data-aos="fade-right" data-aos-delay="100">
+                <img src="chaussure.png" alt="" class="hero-design-img" draggable="false" loading="lazy">
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <p class="scroll">Scroll pour decouvrir</p>
+            <i class="fa-solid fa-arrow-down"></i>
+        </div>
+    </div>
+    <div class="bande" aria-label="Livraison offerte dès 150 euros, retours sous 30 jours, conçu en France">
+        <div class="bande-track">
+            <p class="bande-group">LIVRAISON OFFERTE DÈS 150 € <span aria-hidden="true">✦</span> RETOURS SOUS 30 JOURS
+                <span aria-hidden="true">✦</span> CONÇU EN FRANCE <span aria-hidden="true">✦</span></p>
+            <p class="bande-group" aria-hidden="true">LIVRAISON OFFERTE DÈS 150 € <span>✦</span> RETOURS SOUS 30 JOURS
+                <span>✦</span> CONÇU EN FRANCE <span>✦</span></p>
+        </div>
+    </div>
+    <section class="products" id="products-section">
+    <div class="products-content">
+
+        <div class="product-card">
+            <img src="chaussure1-bg.png" alt="" class="product-img" draggable="false" loading="lazy">
+            <h2>Cloud<span>Max</span></h2>
+            <h3 class="product-description">Si discrète qu'on l'oublie. <br>Jusqu'au jour où on vous demande d'où elle sort.</h3>
+            <p class="price">230€</p>
+            <button type="button" class="cta2 add-to-cart" data-product="cloudmax"><i class="fa-solid fa-cart-shopping"></i>Ajouter au panier</button>
+        </div>
+
+        <div class="product-card">
+            <img src="chaussure1-bg.png" alt="" class="product-img" draggable="false" loading="lazy">
+            <h2>Air<span>Wave</span></h2>
+            <h3 class="product-description">Légère comme l'air. <br>Conçue pour ne jamais vous ralentir.</h3>
+            <p class="price">190€</p>
+            <button type="button" class="cta2 add-to-cart" data-product="airwave"><i class="fa-solid fa-cart-shopping"></i>Ajouter au panier</button>
+        </div>
+
+        <div class="product-card">
+            <img src="chaussure1-bg.png" alt="" class="product-img" draggable="false" loading="lazy">
+            <h2>Storm<span>Grip</span></h2>
+            <h3 class="product-description">Adhérence totale, par tous les temps. <br>Rien ne l'arrête.</h3>
+            <p class="price">210€</p>
+            <button type="button" class="cta2 add-to-cart" data-product="stormgrip"><i class="fa-solid fa-cart-shopping"></i>Ajouter au panier</button>
+        </div>
+
+    </div>
+
+</section>
+    <div class="cartPopUP hidden" role="status" aria-live="polite">
+        <h2>Ajouté au panier !</h2>
+    </div>
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ once: true });</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="gradient.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

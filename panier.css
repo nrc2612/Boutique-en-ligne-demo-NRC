@@ -1,0 +1,228 @@
+/* Styles propres à la page panier (le reste vient de style.css + style-products.css) */
+
+.cart-page{
+    min-height: 100vh;
+    padding: calc(7vh + 2.5rem) clamp(1.25rem, 6vw, 5rem) 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.35rem;
+}
+
+.cart-page .title span{
+    color: var(--accent);
+}
+
+.cart-page .hidden{
+    display: none !important;
+}
+
+.cart-layout{
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 21rem;
+    gap: 2rem;
+    align-items: start;
+    width: 100%;
+    max-width: 72rem;
+    margin-top: 1rem;
+}
+
+.cart-items{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+/* ---------- Ligne produit ---------- */
+
+.cart-item{
+    display: grid;
+    grid-template-columns: 6rem minmax(0, 1fr) auto 5.5rem auto;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    background: rgb(223, 203, 234);
+    color: #221825;
+    border: 2px solid var(--ink);
+    border-radius: 2px;
+    box-shadow: 6px 6px 0 var(--ink);
+}
+
+.cart-item-img{
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(3px 3px 0 rgba(0, 0, 0, 0.4));
+}
+
+.cart-item-info h2{
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    color: #221825;
+}
+
+.cart-item-unit{
+    margin: 0.25rem 0 0;
+    font-size: 0.88rem;
+    color: var(--ink-soft);
+}
+
+.qty{
+    display: inline-flex;
+    align-items: center;
+    border: 2px solid #221825;
+    border-radius: 2px;
+    background: #fff;
+}
+
+.qty button{
+    width: 2.25rem;
+    height: 2.25rem;
+    border: 0;
+    background: transparent;
+    color: #221825;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.qty button:hover:not(:disabled){
+    background: var(--accent);
+}
+
+.qty button:disabled{
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
+.qty-value{
+    min-width: 2rem;
+    text-align: center;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+}
+
+.cart-item-total{
+    margin: 0;
+    text-align: right;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: #221825;
+}
+
+.cart-item-remove{
+    width: 2.25rem;
+    height: 2.25rem;
+    border: 2px solid transparent;
+    border-radius: 2px;
+    background: transparent;
+    color: #221825;
+    cursor: pointer;
+}
+
+.cart-item-remove:hover{
+    border-color: #221825;
+    background: var(--secondaire);
+}
+
+/* ---------- Récapitulatif ---------- */
+
+.cart-summary{
+    position: sticky;
+    top: calc(7vh + 1.5rem);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: var(--accent);
+    color: var(--bg);
+    border: 2px solid var(--ink);
+    border-radius: 2px;
+    box-shadow: 6px 6px 0 var(--ink);
+}
+
+.cart-summary h2{
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+}
+
+.cart-summary dl{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.cart-summary dl div{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.cart-summary dt,
+.cart-summary dd{
+    margin: 0;
+    font-weight: 600;
+}
+
+.cart-total-row{
+    padding-top: 0.75rem;
+    border-top: 2px solid var(--bg);
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+}
+
+.cart-summary .cta2{
+    background: var(--bg);
+    color: var(--accent);
+    border-color: var(--bg);
+    box-shadow: 4px 4px 0 var(--ink);
+}
+
+.cta2{
+    cursor: pointer;
+}
+
+.cart-summary .cta2:hover:not(:disabled),
+.cart-summary .cta2:focus-visible{
+    background: var(--ink);
+    color: var(--bg);
+}
+
+.cart-summary .cta2:disabled{
+    opacity: 0.6;
+    cursor: progress;
+}
+
+a{
+    text-decoration: none;
+}
+
+.cart-error{
+    margin: 0;
+    min-height: 1.2em;
+    font-size: 0.88rem;
+    font-weight: 700;
+}
+
+.cart-continue{
+    color: var(--bg);
+    font-weight: 600;
+    font-size: 0.92rem;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    cursor: pointer;
+}
+
+/* ---------- Panier vide ---------- */
+
+.cart-empty{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+}
