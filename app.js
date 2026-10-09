@@ -22,8 +22,7 @@ const MAX_QTY = 10;
 // URL de l'API : utilise ton Worker Cloudflare en production, et le serveur local en dev
 const checkoutEndpoint = ['localhost', '127.0.0.1'].includes(window.location.hostname)
     ? 'http://127.0.0.1:3000/create-checkout-session'
-    : 'https://boutique-en-ligne-demo-nrc.marechalucas2612.workers.dev/create-checkout-session';
-
+    : 'https://boutique-en-ligne-demo-backend.onrender.com/create-checkout-session';
 
 function loadCart() {
     try {
